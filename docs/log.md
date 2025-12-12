@@ -7,4 +7,6 @@
 | 11/11/2025 | (Pivot) Initial research, download and play with emotions dataset | 3         |
 | 11/14/2025 | Emotions dataset cleaning | 1         |
 | 12/12/2025 | (Pivot) Research and initial AddPad ideation | 2         |
-| **Total**  |                  | **8.5**     |
+| 12/12/2025 | Code AddPad environment, action functions, step function, obs function, and correct function | 2         |
+| 12/12/2025 | Create episode runner for AddPad environment | 0.5         |
+| **Total**  |                  | **11**     |
