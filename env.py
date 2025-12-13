@@ -2,6 +2,12 @@ from dataclasses import dataclass, field
 from enum import IntEnum
 from random import randint
 
+# 0-9: set digit at cursor
+# 10: toggle carry at cursor
+# 11: move cursor left
+# 12: move cursor right
+# 13: be done
+
 EMPTY = -1
 
 class Cursor(IntEnum):
@@ -96,7 +102,6 @@ class AddPad:
         if not state.done and state.steps >= self.max_steps:
             state.done = True
             info["max_steps"] = True
-            reward += -1.0
 
         if state.done:
             reward += 1.0 if self.is_correct() else -1.0
@@ -121,7 +126,7 @@ class AddPad:
         }
     
     def is_correct(self):
-        return self.get_current_answer == self.state.target
+        return self.get_current_answer() == self.state.target
 
     def set_digit(self, digit):
         match self.state.cursor:

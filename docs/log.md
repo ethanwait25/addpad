@@ -9,4 +9,6 @@
 | 12/12/2025 | (Pivot) Research and initial AddPad ideation | 2         |
 | 12/12/2025 | Code AddPad environment, action functions, step function, obs function, and correct function | 2         |
 | 12/12/2025 | Create episode runner for AddPad environment | 0.5         |
-| **Total**  |                  | **11**     |
+| 12/12/2025 | Create oracle agent | 1        |
+| 12/12/2025 | Create evaluation function | 0.5        |
+| **Total**  |                  | **12.5**     |
