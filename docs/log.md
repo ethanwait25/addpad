@@ -12,4 +12,5 @@
 | 12/12/2025 | Create oracle agent | 1        |
 | 12/12/2025 | Create evaluation function | 0.5        |
 | 12/13/2025 | PyGame GUI | 3        |
-| **Total**  |                  | **15.5**     |
+| 12/13/2025 | Generate oracle datasets for behavior cloning | 1        |
+| **Total**  |                  | **16.5**     |
