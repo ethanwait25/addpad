@@ -13,4 +13,5 @@
 | 12/12/2025 | Create evaluation function | 0.5        |
 | 12/13/2025 | PyGame GUI | 3        |
 | 12/13/2025 | Generate oracle datasets for behavior cloning | 1        |
-| **Total**  |                  | **16.5**     |
+| 12/14/2025 | Create Behavior Cloner MLP | 2        |
+| **Total**  |                  | **18.5**     |

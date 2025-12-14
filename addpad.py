@@ -4,11 +4,12 @@ import pygame
 import time
 from env import AddPad
 from episode_runner import run_episode
-from oracle import Oracle
 from random_agent import RandomAgent
+from oracle import Oracle
+from bc import BehaviorCloner, MLPModel, BCConfig
 from env import Cursor, EMPTY
 
-do_sleep = False
+do_sleep = True
 
 pygame.init()
 screen = pygame.display.set_mode((640, 360))
@@ -23,7 +24,9 @@ font_digit = pygame.font.SysFont("consolas", 42)
 font_carry = pygame.font.SysFont("consolas", 18)
 
 env = AddPad(max_digits=3)
-policy = Oracle()
+# policy = RandomAgent()
+# policy = Oracle()
+policy = BehaviorCloner.load("bc_1d.pt", 20)
 
 obs = env.reset()
 last_action = None
@@ -159,6 +162,9 @@ while running:
     if do_sleep: time.sleep(0.1)
 
     pygame.display.flip()
+
+    # if done and not env.is_correct():
+    #     time.sleep(100000)
 
     if done:
         if do_sleep: time.sleep(3)

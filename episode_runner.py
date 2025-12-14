@@ -1,6 +1,7 @@
 from env import AddPad
 from random_agent import RandomAgent
 from oracle import Oracle
+from bc import BehaviorCloner, MLPModel, BCConfig
 
 def run_episode(env, policy, verbose=False):
     obs = env.reset()
@@ -68,7 +69,9 @@ if __name__ == "__main__":
     env = AddPad()
     random = RandomAgent()
     oracle = Oracle()
+    bc = BehaviorCloner.load("bc_3d.pt", 20)
 
     print(f"Random: {evaluate(env, random.act)}")
     print(f"Oracle: {evaluate(env, oracle.act)}")
+    print(f"Behavior Cloner: {evaluate(env, bc.act)}")
     
