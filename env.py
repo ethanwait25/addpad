@@ -97,7 +97,7 @@ class AddPad:
         if info["illegal"]:
             reward += -0.1
 
-        reward += -0.01
+        reward += -0.02
         
         if not state.done and state.steps >= self.max_steps:
             state.done = True

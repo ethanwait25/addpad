@@ -202,16 +202,16 @@ class BehaviorCloner(Agent):
 def train_bc():
     X_1, y_1 = BehaviorCloner.load_npz("data-1d.npz")
     bc = BehaviorCloner(input_dim=X_1.shape[1])
-    # bc.train(X_1, y_1)
-    # bc.save("bc_1d.pt")
+    bc.train(X_1, y_1)
+    bc.save("bc_1d.pt")
 
-    # X_2, y_2 = BehaviorCloner.load_npz("data-2d.npz")
-    # bc.train(X_2, y_2)
-    # bc.save("bc_2d.pt")
+    X_2, y_2 = BehaviorCloner.load_npz("data-2d.npz")
+    bc.train(X_2, y_2)
+    bc.save("bc_2d.pt")
 
     X_3, y_3 = BehaviorCloner.load_npz("data-3d.npz")
     bc.train(X_3, y_3)
-    bc.save("bc_3d_no_curriculum.pt")
+    bc.save("bc_3d.pt")
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "t":
